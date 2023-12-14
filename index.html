@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h3> <center>
+      GRAFIK DATA KECAMATAN JABON, PORONG, DAN KREMBUNG KABUPATEN SIDOARJO
+    </h3></center>
+    <div>
+      <canvas id="myChart"></canvas>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script>
+      const ctx = document.getElementById("myChart");
+
+      new Chart(ctx, {
+        type: "bar",
+        data: {
+          labels: [
+            "Rataan Lumpur",
+            "Lahan Terbuka",
+            "Pemukiman Desa",
+            "Tambak",
+            "Tubuh air",
+            "Industri",
+            "Mangrove",
+            "Tanaman Semusim",
+            "Lumpur",
+            "Semak",
+            "waduk",
+          ],
+          datasets: [
+            {
+              label: "Perubahan tahun 2019",
+              data: [2, 1,8,4,1,2,2,8,1,1,0],
+              borderWidth: 1,
+            },
+            {
+              label: "Perubahan tahun 2023",
+              data: [0, 1, 10, 7, 0, 3, 1, 4, 1, 0,1],
+              borderWidth: 1,
+            },
+          ],
+        },
+        options: {
+          scales: {
+            y: {
+              beginAtZero: true,
+            },
+          },
+        },
+      });
+    </script>
+  </body>
+</html>
